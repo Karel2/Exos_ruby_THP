@@ -5,8 +5,11 @@ if n >= 25
 elsif n <= 0
 	puts "Votre nombre n’est pas correct."
 else
-  1.upto(n) do |i|
-    i.times { print "#" }
-    puts
-  end
-end  
+def pyramid(height)
+  height.times {|n|
+    print '  ' * (height - n)
+    puts '#' * (2 * n + 1)
+  }
+end
+end
+pyramid n
